@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form #quoteForm="ngForm" (ngSubmit)='addnewitem()'>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="name" [(ngModel)]='newitem.title' class="form-control" #name="ngModel"  required>
+          <!-- <div [hidden]='name.valid||name.pristine' class="alert alert-danger">
+            <p>please fill in the form</p>
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" name="name" [(ngModel)]='newitem.description' class="form-control" #name="ngModel" required>
+          <!-- <div [hidden]='name.valid||name.pristine' class="alert alert-danger">
+            <p>please fill in the form</p>
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" name="name" class="form-control" [(ngModel)]='newitem.author'#name="ngModel"required>
+          <!-- <div [hidden]='name.valid||name.pristine' class="alert alert-danger">
+            <p>please fill in the form</p>
+          </div> -->
+        </div>
+        <div class="form-group">
+          <input type="submit" name="submit" value="submit" class="btn btn-success">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
